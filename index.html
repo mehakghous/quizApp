@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- form -->
+    <div id="main">
+
+        <div id="thin">
+            <div id="login">
+                <h1 id="logo">QuizAdda!!!</h1>
+                <label><i class="fas fa-user"></i><input type="text" placeholder="Name" id="username"></label>
+                <label><i class="fas fa-user"></i><input type="email" required placeholder="Email" id="email"></label>
+                <button onclick="loginuser()">Log In</button>
+            </div>
+        </div>
+    </div>
+    <!-- quiz -->
+    <div class="card-cont hide">
+        <div class="quizQues hide" id="quizQues">
+           <div class="top">
+            <div id="name">
+
+            </div>
+            <div id="timer">
+                <span>Time:</span>
+                <span id="seconds">00</span>
+                <span id="colon">:</span>
+                <span id="minutes">00</span>
+
+            </div>
+
+           </div>
+            <h1 id="ques"></h1>
+            <li class="options"></li>
+            <li class="options"></li>
+            <li class="options"></li>
+            <li class="options"></li>
+            <span id="ques-num"></span>
+    <button class="btn" id="next-btn" onclick="changeQuestion()">next</button>
+            <button class="btn hide" id="sub-btn" onclick="submitBtn()">submit quiz</button>
+
+        </div>
+        <div class="btn-cont">
+            <button class="btn" id="start-btn" onclick="startquiz(this)">Start Quiz?</button>
+
+        </div>
+    </div>
+    <!-- result -->
+    <div class="main-result hide" id="resultDiv">
+        <div id="in-result">
+           <center><h1>Result</h1></center>
+        <h2 id="sec-name" class="Total-marks"></h2>
+
+        <div class="Total-marks">
+            <h2>Correct answers:</h2><button id="correct">correct</button>
+        </div>
+        <div class="Total-marks">
+            <h2>Wrong answers:</h2><button id="wrong">wrong</button>
+        </div>
+        <div class="Total-marks">
+            <h2>Total Score:</h2><button id="Total">Total</button>
+        </div>
+       </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
